@@ -1,0 +1,29 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "watchagent",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-10-14",
+  "compatibility_flags": ["global_fetch_strictly_public"],
+  "observability": { "enabled": true },
+  "workers_dev": true,
+  "preview_urls": false,
+  "triggers": { "crons": ["*/5 * * * *"] },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "watchagent",
+      "database_id": "c5a275fb-a89b-401d-9b20-98ebd88a4a19",
+      "migrations_dir": "migrations"
+    }
+  ],
+  "ai": { "binding": "AI", "remote": true },
+  "browser": { "binding": "BROWSER", "remote": true },
+  "queues": {
+    "producers": [{ "binding": "JOBS", "queue": "watchagent-jobs" }],
+    "consumers": [{ "queue": "watchagent-jobs", "max_batch_size": 5, "max_batch_timeout": 1, "max_retries": 5, "dead_letter_queue": "watchagent-dlq" }]
+  },
+  "vars": {
+    "AI_MODEL": "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+    "MAX_CONTENT_CHARS": "12000"
+  }
+}

@@ -1,0 +1,3 @@
+API_KEY=change-me-local
+# Optional deterministic local-only page + AI fixtures. NEVER enable in production.
+LOCAL_FIXTURES=true

@@ -1,0 +1,33 @@
+{
+  "name": "watchagent-cloudflare",
+  "version": "0.1.0",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev --local --test-scheduled",
+    "dev:cloudflare": "wrangler dev --test-scheduled",
+    "deploy": "wrangler deploy",
+    "db:local": "wrangler d1 migrations apply watchagent --local",
+    "db:remote": "wrangler d1 migrations apply watchagent --remote",
+    "typecheck": "tsc --noEmit && tsc --noEmit -p tsconfig.test.json",
+    "test": "vitest run && node --test test/dashboard.test.mjs",
+    "test:smoke": "node scripts/smoke.mjs",
+    "test:live": "node --env-file-if-exists=.env scripts/live.mjs",
+    "test:production": "node --env-file-if-exists=.env scripts/production.mjs",
+    "eval:live": "node --env-file-if-exists=.env scripts/evaluate.mjs",
+    "build": "wrangler deploy --dry-run --outdir dist"
+  },
+  "dependencies": {
+    "ipaddr.js": "^2.2.0",
+    "zod": "^4.1.0"
+  },
+  "devDependencies": {
+    "@cloudflare/vitest-plugin": "^1.4.2",
+    "@cloudflare/workers-types": "^5.20261014.1",
+    "@types/node": "^26.6.5",
+    "typescript": "^5.6.3",
+    "vitest": "^4.1.0",
+    "wrangler": "^4.151.0"
+  }
+}

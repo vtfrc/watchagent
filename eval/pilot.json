@@ -1,0 +1,58 @@
+[
+  {
+    "name": "Linear — Basic annual-billing price",
+    "url": "https://linear.app/pricing",
+    "condition": "Notify me if the advertised USD per-user monthly-equivalent price for Linear Basic, billed yearly, changes. Ignore Business, Enterprise, monthly-billing offers, feature lists and formatting.",
+    "interval_minutes": 60,
+    "use_browser": false
+  },
+  {
+    "name": "Loops — Growth starting price",
+    "url": "https://loops.so/pricing",
+    "condition": "Notify me if the advertised USD monthly starting price of the existing Growth plan changes. Ignore contact-count slider choices, Free, Enterprise, add-ons, feature changes and trial offers.",
+    "interval_minutes": 60,
+    "use_browser": false
+  },
+  {
+    "name": "Loops — genuinely new plan under $50",
+    "url": "https://loops.so/pricing",
+    "condition": "Notify me if they launch a plan under $50 per month.",
+    "interval_minutes": 60,
+    "use_browser": false
+  },
+  {
+    "name": "Fathom — 100,000 pageviews monthly price",
+    "url": "https://usefathom.com/pricing",
+    "condition": "Notify me if the USD monthly subscription price for up to 100,000 monthly pageviews changes. Ignore yearly billing, other pageview tiers, extra-site add-ons, trials and formatting.",
+    "interval_minutes": 60,
+    "use_browser": false
+  },
+  {
+    "name": "D1 — paid rows-written unit rate",
+    "url": "https://developers.cloudflare.com/d1/platform/pricing/index.md",
+    "condition": "Notify me if the USD rate per million rows written on Workers Paid changes. Ignore the Free plan, included monthly quota, storage, read pricing, documentation dates and examples.",
+    "interval_minutes": 60,
+    "use_browser": false
+  },
+  {
+    "name": "Linux — explicitly stable release",
+    "url": "https://www.kernel.org/",
+    "condition": "Notify me if the version explicitly labelled stable changes. Ignore mainline releases, rc builds, longterm branches, release-date-only changes and site news.",
+    "interval_minutes": 60,
+    "use_browser": false
+  },
+  {
+    "name": "Go — published stable version",
+    "url": "https://go.dev/VERSION?m=text",
+    "condition": "Notify me when the published Go version number changes. Ignore build timestamps and whitespace-only changes.",
+    "interval_minutes": 60,
+    "use_browser": false
+  },
+  {
+    "name": "OpenCode — latest stable release tag",
+    "url": "https://github.com/anomalyco/opencode/releases/latest",
+    "condition": "Notify me if the release tag of the latest stable OpenCode release changes. Ignore GitHub navigation, stars, reactions, download counts, asset or checksum changes, release-note edits for the same tag, and prerelease tags.",
+    "interval_minutes": 60,
+    "use_browser": false
+  }
+]
